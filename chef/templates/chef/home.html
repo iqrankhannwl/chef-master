@@ -1,0 +1,23 @@
+{%extends "chef/base.html"%}
+{%block title%}
+chef Master
+{%endblock title%}
+
+{%block content%}
+<div class="container my-5">
+    <h1 class="text-center ">Ask Your Recipe AI master Chef</h1>
+    <hr>
+    <form action="{%url 'home'%}" method="post">
+        {%csrf_token%}
+        <div class="my-2">
+            {{form.recipe_message}}
+        </div>
+        <input type="submit" class="btn btn-success" value="Ask About Recipe">
+    </form>
+    <div class="container my-5">
+        <pre>
+            {{response}}
+        </pre>
+    </div>
+</div>
+{%endblock content%}
