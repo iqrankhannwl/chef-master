@@ -1,6 +1,5 @@
 from decouple import config
 from langchain_openai import OpenAI, ChatOpenAI
-from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
 
 
@@ -17,3 +16,5 @@ def chef_model(recipe):
     formatedChatPrompt = chatPrompt.format_messages(
         asked_recipe = recipe
     )
+    response = chat.invoke(formatedChatPrompt)
+    return response.content
