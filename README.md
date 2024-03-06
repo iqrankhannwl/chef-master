@@ -12,7 +12,7 @@ python3 -m venv env
 ```
 ## Activate Enviroment
 ```
-sournce env/bin/activate
+source env/bin/activate
 ```
 ## Install Dependencies
 ```
@@ -25,3 +25,9 @@ pip3 install -r requirement.txt
 python3 manage.py runserver
 ```
 
+
+# Runserver With MakeFile
+
+```
+make server
+```

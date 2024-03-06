@@ -18,3 +18,4 @@ def chef_model(recipe):
     )
     response = chat.invoke(formatedChatPrompt)
     return response.content
+
